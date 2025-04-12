@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,10 +14,17 @@ public class SpawnMode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (this.enabled == false)
+        {
+            return;
+        }
     }
 
-    public void Action(){
+    public void Action(Enum button){
+        if (this.enabled == false)
+        {
+            return;
+        }
         print("SPAWN!!!");
     }
 }

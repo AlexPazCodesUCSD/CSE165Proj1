@@ -9,12 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8434994636477527726}
-  - component: {fileID: 8983628360470768435}
   - component: {fileID: 1047559483922550453}
-  - component: {fileID: 8568738978124877550}
-  - component: {fileID: 6307702952408871944}
-  - component: {fileID: 5149999237250680122}
-  - component: {fileID: 2700504246341705182}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -40,28 +35,6 @@ Transform:
   - {fileID: 6415682433775992447}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8983628360470768435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064547181444176138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 140ad3ab4050c1a47ada88c9dd013852, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerCamera: {fileID: 6198116259365658897}
-  walkSpeed: 6
-  runSpeed: 12
-  jumpPower: 3
-  gravity: 10
-  lookSpeed: 2
-  lookXLimit: 45
-  defaultHeight: 1.3
-  crouchHeight: 1
-  crouchSpeed: 3
 --- !u!143 &1047559483922550453
 CharacterController:
   m_ObjectHideFlags: 0
@@ -88,57 +61,6 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8568738978124877550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064547181444176138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4807d6cbd3431479d8f0c1c5b75862, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &6307702952408871944
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064547181444176138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e515b7573dce4b94b9787229fed41645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &5149999237250680122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064547181444176138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cfd1f0879b00f2648ba2c23ec8ef92df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2700504246341705182
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3064547181444176138}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0793dda8e1e86d40af2ee2bdb190e73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  object1: {fileID: 3783830352573918599, guid: 67488574e2f54a94bac3a8aa602e5f81, type: 3}
-  object2: {fileID: 283461275322490218, guid: b84c7845f06ec0d41bcc3eedf3e17d5c, type: 3}
-  offset: {fileID: 6415682433775992447}
 --- !u!1 &5418600080040465614
 GameObject:
   m_ObjectHideFlags: 0
