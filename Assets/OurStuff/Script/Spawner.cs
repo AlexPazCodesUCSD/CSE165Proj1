@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour
                 break;
         }
     }
-
+    
     public void SwitchFurniture(){  // Switch which type of furniture we'll spawn
         furniture = (furniture == 0) ? 1 : 0;
     }
