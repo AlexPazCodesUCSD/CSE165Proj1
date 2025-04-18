@@ -5,24 +5,27 @@ using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 public class Selectable : MonoBehaviour
 {
-    private Renderer renderer;
+    protected Renderer renderer;
     [SerializeField] Color selectedColor;
     [SerializeField] float speed;
     [SerializeField] float zStep;
-    Color initialColor;
-    bool isSelected = false;
+    protected Color initialColor;
+    [SerializeField] protected bool isSelected = false;
     Vector3 target;
     Vector3 offset;
+    RotationAxes ra;
+    Scalable sc;
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         renderer = GetComponent<Renderer>();
         initialColor = renderer.material.color;
-        Application.targetFrameRate = 60;
+        ra = GetComponentInChildren<RotationAxes>();
+        sc = GetComponent<Scalable>();
     }
 
     // Update is called once per frame
-    void Update()
+    protected virtual void Update()
     {
         // Move our position a step closer to the target.
         var step =  speed * Time.deltaTime; // calculate distance to move
@@ -35,11 +38,18 @@ public class Selectable : MonoBehaviour
         }
     }
 
+    public void ChangeScale(int direction){
+        sc.ChangeScale(direction);
+    }
+
+    public void Rotate(int direction){
+        ra.RotateAroundAxis(direction);
+    }
     public void EnterHover(){
         renderer.material.color = selectedColor;
     }
 
-    public void ExitHover(){
+    public virtual void ExitHover(){
         renderer.material.color = initialColor;
     }
 
@@ -47,12 +57,12 @@ public class Selectable : MonoBehaviour
         target = point;
     }
 
-    public void SelectObject(Vector3 point){
+    public virtual void SelectObject(Vector3 point){
         offset = gameObject.transform.position - point;
         isSelected = true;
     }
 
-    public void Unselect(){
+    public virtual void Unselect(){
         isSelected = false;
     }
 }
