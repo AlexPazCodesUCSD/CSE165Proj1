@@ -42,6 +42,13 @@ public class Selectable : MonoBehaviour
         sc.ChangeScale(direction);
     }
 
+    public void RotationToggleOn(){
+        ra.ToggleOn();
+    }
+
+    public void RotationToggleOff(){
+        ra.ToggleOff();
+    }
     public void Rotate(int direction){
         ra.RotateAroundAxis(direction);
     }
@@ -57,12 +64,20 @@ public class Selectable : MonoBehaviour
         target = point;
     }
 
-    public virtual void SelectObject(Vector3 point){
-        offset = gameObject.transform.position - point;
+    public virtual void SelectObject(Vector3 point, int mode){
+        switch(mode){
+            case 0:
+                offset = gameObject.transform.position - point;
+                break;
+            case 1:
+                ra.ToggleOn();
+                break;
+        }
         isSelected = true;
     }
 
     public virtual void Unselect(){
+        ra.ToggleOff();
         isSelected = false;
     }
 }
